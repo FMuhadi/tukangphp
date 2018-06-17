@@ -1,7 +1,7 @@
 <?php
 /*PHP_CLASS_GENERATOR
 *CONTROLLER
-*GENERATE ON 2018-06-04 15:43:41
+*GENERATE ON 2018-06-17 07:16:24
 */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -18,7 +18,7 @@ class kabupatenkota extends CI_Controller {
     }
     
     public function index(){
-$arraydataget = array(
+        $arraydataget = array(
             'kabupatenkotaid'=>$this->input->get('kabupatenkotaid'),
             'kabupatenkotaname'=>$this->input->get('kabupatenkotaname'),
             'r_provinsiid'=>$this->input->get('r_provinsiid'),

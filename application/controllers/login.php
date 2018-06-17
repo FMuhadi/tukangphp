@@ -6,7 +6,7 @@ class login extends CI_Controller {
         parent::__construct();
         $this->load->database();
 		$this->load->helper('url');
-        $this->load->model('muser');
+        $this->load->model('mlogin');
 		$this->load->library('session');
     }
 	public function index()
@@ -22,11 +22,10 @@ class login extends CI_Controller {
 	public function loginpost($slug=false)
 	{
 		$users = $this->input->post('usernames');
-		"wwwwwwwwwwwwww";
 		$pass = md5(md5("pa".$this->input->post('password'))."ss");
-		"wwwwwwwwwwwwww";
-		$logininfo = $this->muser->manualquerysingle("select username,userpassword from user where username='$users'");
+		$logininfo = $this->mlogin->manualquerysingle("select username,userpassword from user where username='$users'");
 		if($pass==$logininfo->userpassword){
+			$this->mlogin->updatelastlogin($logininfo->userid);
 			$this->session->set_userdata('username', $logininfo->username);
 			redirect('//'.base_url().'home', 'location');
 		}else{

@@ -1,7 +1,7 @@
 <?php
 /*PHP_CLASS_GENERATOR
 *CONTROLLER
-*GENERATE ON 2018-06-04 15:43:41
+*GENERATE ON 2018-06-17 07:16:24
 */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -17,7 +17,7 @@ class provinsi extends CI_Controller {
     }
     
     public function index(){
-$arraydataget = array(
+        $arraydataget = array(
             'provinsiid'=>$this->input->get('provinsiid'),
             'provinsiname'=>$this->input->get('provinsiname')
         );

@@ -1,7 +1,7 @@
 <?php
 /*PHP_CLASS_GENERATOR
 *CONTROLLER
-*GENERATE ON 2018-06-04 15:43:41
+*GENERATE ON 2018-06-17 07:16:24
 */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -18,7 +18,7 @@ class jumlahpenduduk extends CI_Controller {
     }
     
     public function index(){
-$arraydataget = array(
+        $arraydataget = array(
             'jumlahpendudukid'=>$this->input->get('jumlahpendudukid'),
             'jumlahpenduduktahun'=>$this->input->get('jumlahpenduduktahun'),
             'r_kabupatenkotaid'=>$this->input->get('r_kabupatenkotaid'),
@@ -43,6 +43,7 @@ $arraydataget = array(
 
     public function create($slug=false){
         $arraydatapost = array(
+            'jumlahpenduduktahun'=>$this->input->post('jumlahpenduduktahun'),
             'r_kabupatenkotaid'=>$this->input->post('r_kabupatenkotaid'),
             'jumlahpendudukkota'=>$this->input->post('jumlahpendudukkota'),
             'jumlahpendudukdesa'=>$this->input->post('jumlahpendudukdesa')
@@ -63,6 +64,7 @@ $arraydataget = array(
 
     public function update($slug=false){
         $arraydatapost = array(
+            'jumlahpenduduktahun'=>$this->input->post('jumlahpenduduktahun'),
             'r_kabupatenkotaid'=>$this->input->post('r_kabupatenkotaid'),
             'jumlahpendudukkota'=>$this->input->post('jumlahpendudukkota'),
             'jumlahpendudukdesa'=>$this->input->post('jumlahpendudukdesa')

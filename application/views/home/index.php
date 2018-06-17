@@ -264,7 +264,7 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="<?=base_url();?>login/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -305,84 +305,43 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a onclick='reloadpage("terpagi.php");'><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a onclick='reloadpage("");'><i class="fa fa-dashboard fa-fw"></i> home</a>
                         </li>
 						<li>
-                            <a onclick='reloadpage("userprofile.php");' ><i class="fa fa-table fa-fw"></i> My Profile</a>
+                            <a onclick='reloadpage("login");' ><i class="fa fa-table fa-fw"></i> login</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-edit fa-fw"></i> Form Pengajuan<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-edit fa-fw"></i>Tools<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a onclick='reloadpage("insertcuti.php");' >Pengajuan Cuti</a>
+                                    <a onclick='reloadpage("tools/table");' >Table</a>
                                 </li>
                                 <li>
-                                    <a  onclick='reloadpage("insertsakiti.php");'>Sakit / Ijin / Dinas </a>
+                                    <a  onclick='reloadpage("tools/chart");'>Chart</a>
                                 </li>
 								<li>
-                                    <a  onclick='reloadpage("insertlembur.php");' >Pengajuan Lembur</a>
+                                    <a  onclick='reloadpage("tools/json");'>Json</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
-						
 						<li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Aprovement Pending<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Rekap Status<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <?php
-									//foreach($group as $id => $name){
-										//echo "<li>";
-										//echo "<a onclick='reloadpage(\"rekaptelat.php?groupid=$id\");'>$name</a>";
-										//echo "</li>";
-									
-									//}
-								
-								?>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        
-                        <li>
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i> Rekap Jam<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-							
-								
-                                
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        
-                        <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Rekap Ijin/Cuti/Sakit<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-edit fa-fw"></i>Profile<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a >Rekap Ijin</a>
+                                    <a onclick='reloadpage("profile");' >View</a>
                                 </li>
                                 <li>
-                                    <a >Rekap Cuti</a>
+                                    <a  onclick='reloadpage("profile/input");'>Input</a>
                                 </li>
 								<li>
-                                    <a >Rekap Sakit</a>
+                                    <a  onclick='reloadpage("profile/search");'>Search</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
 						<li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Rekap Lembur<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-						<li>
-                            <a href='logout.php'><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            <a href='<?=base_url();?>login/logout'><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                 </div>
